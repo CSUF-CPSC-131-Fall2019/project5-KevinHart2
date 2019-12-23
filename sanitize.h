@@ -14,11 +14,11 @@ void sanitize(std::string & word) {
     while(shouldFilter(word[start_index])) {
         start_index++;
     }
-
-    while(shouldFilter(word[end_index])) {
-        end_index--;
-    }
-
+	if (start_index < end_index) {
+		while (shouldFilter(word[end_index])) {
+			end_index--;
+		}
+	}
     if (start_index != 0 || end_index != word.size() - 1) {
         word = word.substr(start_index, end_index);
     }

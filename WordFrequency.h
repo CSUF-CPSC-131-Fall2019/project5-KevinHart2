@@ -2,11 +2,14 @@
 #include <string>
 #include <unordered_map>
 
+using namespace std;
 using std::string;
 
 class WordFrequency {
 private:
-    // TO BE COMPLETED
+    
+	unordered_map<string, size_t> hmap;
+	// TO BE COMPLETED
 
 public:
     WordFrequency(); // default constructor
